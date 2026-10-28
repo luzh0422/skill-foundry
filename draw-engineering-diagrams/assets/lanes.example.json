@@ -1,0 +1,22 @@
+{
+  "kind": "lanes",
+  "title": "跨进程渲染：录制、共享与回放",
+  "subtitle": "按阶段分区，区分结构、命令、资源与提交；此图为布局示例，不替代具体代码核对",
+  "lanes": [
+    {"title": "客户端：选择管线与录制", "role": "structure", "nodes": [
+      {"title": "窗口准入", "body": "开关与窗口规则"},
+      {"title": "树遍历与录制", "body": "DisplayList → 绘制命令"},
+      {"title": "资源打包", "body": "节点描述 + 依赖", "role": "command"}
+    ]},
+    {"title": "资源传输：首次注册，逐帧引用", "role": "resource", "nodes": [
+      {"title": "共享载体", "body": "pool / AHB / 字体路径"},
+      {"title": "资源映射", "body": "MemoryImport → ResourceImport"},
+      {"title": "帧事务", "body": "resourceId / offset / length", "role": "transaction"}
+    ]},
+    {"title": "服务端：快照与回放", "role": "layer", "nodes": [
+      {"title": "接收与校验", "body": "清单 + 资源依赖"},
+      {"title": "不可变内容", "body": "变化内容快照 / 缓存复用", "role": "resource"},
+      {"title": "RenderEngine", "body": "命令回放 / 缓存图像合成", "role": "structure"}
+    ]}
+  ]
+}

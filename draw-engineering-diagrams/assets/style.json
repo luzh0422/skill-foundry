@@ -1,0 +1,21 @@
+{
+  "background": "#f8fafc",
+  "panel": "#ffffff",
+  "text": "#17283d",
+  "secondary": "#587087",
+  "border": "#dbe3eb",
+  "roles": {
+    "structure": {"stroke": "#3269ba", "fill": "#e9f0fc", "text": "#3269ba"},
+    "layer": {"stroke": "#7565b3", "fill": "#f3eff9", "text": "#423775"},
+    "resource": {"stroke": "#278373", "fill": "#e5f4ef", "text": "#278373"},
+    "command": {"stroke": "#a56b1f", "fill": "#faf0df", "text": "#a56b1f"},
+    "transaction": {"stroke": "#de6548", "fill": "#fbeae5", "text": "#994a38"},
+    "neutral": {"stroke": "#52677d", "fill": "#eef2f4", "text": "#41566d"}
+  },
+  "font_family": "Noto Sans CJK SC, Noto Sans SC, Microsoft YaHei, PingFang SC, sans-serif",
+  "font_sizes": {"title": 38, "subtitle": 21, "section": 25, "node": 23, "body": 20, "note": 18},
+  "canvas_width": 1600,
+  "margin": 48,
+  "radius": 14,
+  "stroke_width": 2
+}

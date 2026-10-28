@@ -1,0 +1,12 @@
+{
+  "kind": "timeline",
+  "title": "工程交付：从原型到稳定发布",
+  "subtitle": "日期或阶段标签来自实际计划；示例使用阶段名，避免虚构交付时间",
+  "milestones": [
+    {"date": "阶段一", "title": "架构与原型", "role": "structure"},
+    {"date": "阶段二", "title": "兼容性对齐", "role": "command"},
+    {"date": "阶段三", "title": "代码提测", "role": "transaction"},
+    {"date": "阶段四", "title": "验证与发布", "role": "resource"},
+    {"date": "阶段五", "title": "持续优化", "role": "layer"}
+  ]
+}

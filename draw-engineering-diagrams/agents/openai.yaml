@@ -1,0 +1,4 @@
+interface:
+  display_name: "工程图表风格"
+  short_description: "复用参考 Wiki 的浅底分区、语义配色和折线布局，绘制工程架构与流程图"
+  default_prompt: "使用 $draw-engineering-diagrams 按参考 Wiki 风格绘制这段工程流程，交付可编辑 SVG 和 PNG 预览。"

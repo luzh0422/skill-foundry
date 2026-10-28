@@ -1,0 +1,18 @@
+{
+  "kind": "state",
+  "title": "增量处理：状态升级与复用闭环",
+  "subtitle": "横排状态卡，升级走上方，完成与回收走下方；此图为通用模板",
+  "states": [
+    {"id": "clean", "title": "CLEAN", "body": "当前内容可复用\n等待下一次变化", "role": "resource"},
+    {"id": "partial", "title": "PARTIAL", "body": "自身内容可复用\n处理变化的子项", "role": "structure"},
+    {"id": "full", "title": "FULL", "body": "当前内容需要重建\n保持依赖与版本一致", "role": "command"}
+  ],
+  "transitions": [
+    {"from": "clean", "to": "partial", "label": "子项变化", "route": "direct", "role": "structure"},
+    {"from": "partial", "to": "full", "label": "自身需重建", "route": "direct", "role": "command"},
+    {"from": "clean", "to": "full", "label": "自身内容变化或缓存失效", "route": "upper", "role": "command"},
+    {"from": "partial", "to": "clean", "label": "完成子项处理与替换", "route": "lower", "role": "structure"},
+    {"from": "full", "to": "clean", "label": "重建成功，进入下一轮复用", "route": "lower", "role": "resource"}
+  ],
+  "note": "先核对状态语义与转移条件，再画线；图中的返回边不能省略。"
+}
